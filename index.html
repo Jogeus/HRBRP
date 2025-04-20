@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HRBRP - Welcome</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  
+  <!-- Add Font Awesome CDN for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .overlay h1 {
+      font-size: 3.5rem;
+      margin: 0 0 15px 0;
+    }
+
+    .overlay p {
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+    }
+
+    /* Container for the buttons */
+    .buttons-container {
+      display: flex;
+      gap: 20px; /* Space between the buttons */
+      justify-content: center;
+      margin-top: 20px; /* Optional: space between the text and buttons */
+    }
+
+    /* Styling for both buttons */
+    .learn-more-btn, .join-us-btn, .play-now-btn {
+      padding: 12px 28px;
+      font-size: 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center; /* Align icon and text */
+      transition: background-color 0.3s ease;
+    }
+
+    /* Learn More Button */
+    .learn-more-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .learn-more-btn:hover {
+      background-color: #218838;
+    }
+
+    /* Join Us Button */
+    .join-us-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .join-us-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Play Now Button */
+    .play-now-btn {
+      background-color: #ff5733; /* Change color for Play Now button */
+      color: white;
+    }
+
+    .play-now-btn:hover {
+      background-color: #c43f1b; /* Darken on hover */
+    }
+
+    /* Styling for the Discord icon */
+    .join-us-btn i {
+      margin-right: 8px; /* Space between icon and text */
+      font-size: 1.2rem; /* Adjust the size of the icon */
+    }
+
+    /* Add animation for spinning the Discord icon on hover */
+    .join-us-btn:hover i {
+      animation: spin 2s ease-in-out forwards;
+    }
+
+    /* Define the spin animation */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg); /* Start at 0 degrees */
+      }
+      50% {
+        transform: rotate(360deg); /* Complete 360-degree spin */
+      }
+      51% {
+        transform: rotate(360deg); /* Keep the icon still for 1 second */
+      }
+      100% {
+        transform: rotate(720deg); /* Spin again to 720 degrees */
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop class="video-background">
+    <source src="assets/hrbrptrailer.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="overlay">
+    <h1>High Rock Border Roleplay</h1>
+    <p>Elite Roleplays ┃ Active And Highly Trained Staff ┃ Immersive Realism</p>
+    
+    <!-- Buttons Container -->
+    <div class="buttons-container">
+      <!-- Play Now Button -->
+      <a href="https://www.roblox.com/games/start?launchData=%7B%5C%22psCode%5C%22%3A%5C%22HRock%5C%22%7D&placeId=2534724415" class="play-now-btn">
+        Play Now
+      </a>
+
+      <!-- Learn More Button -->
+      <a href="about.html" class="learn-more-btn">Learn More</a>
+
+      <!-- Join Us Button -->
+      <a href="https://discord.gg/highrock" target="_blank" class="join-us-btn">
+        <i class="fab fa-discord"></i> Join Us
+      </a>
+    </div>
+  </div>
+</body>
+</html>
