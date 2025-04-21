@@ -48,7 +48,7 @@
     }
 
     .staff-container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 4rem auto;
       padding: 2rem;
       background: rgba(0, 0, 0, 0.7);
@@ -66,19 +66,27 @@
       margin-bottom: 3rem;
     }
 
-    .staff-row {
+    .staff-columns {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
-      margin-bottom: 3rem;
+    }
+
+    .staff-column {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 1rem;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
     .staff-member {
       background: rgba(255, 255, 255, 0.1);
       border-radius: 0.5rem;
       padding: 1rem;
-      width: 250px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -86,8 +94,8 @@
 
     .staff-member img {
       border-radius: 50%;
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       object-fit: cover;
       margin-bottom: 0.75rem;
     }
@@ -110,79 +118,128 @@
 <body>
   <nav>
     <div class="logo-and-links">
-      <!-- Logo -->
       <img src="assets/HRBRPLogo.gif" alt="HRBRP Logo" class="logo">
-      
-      <!-- Navigation Links -->
       <div>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="staff.html">Meet Our Staff</a>
-  
-        
       </div>
     </div>
   </nav>
-  
 
   <div class="staff-container">
     <h1>Meet Our Staff</h1>
     <p>Our staff members are the backbone of High Rock Border Roleplay, ensuring a smooth and enjoyable experience for all players. Get to know the people who keep everything running smoothly.</p>
 
-    <div class="staff-row">
-      <!-- Staff Member 1 -->
-      <div class="staff-member">
-        <img src="assets/charl.png" alt="Staff Member 1">
-        <div class="staff-info">
-          <h3>MrCharl001</h3>
-          <p>Role: Owner</p>
-          <p>Charlie has been a high rank at HRBRP for a year. A while ago, she was given full ownership of HRBRP.</p>
+    <div class="staff-columns">
+      <!-- Column 1 -->
+      <div class="staff-column">
+        <div class="staff-member">
+          <img src="assets/charl.png" alt="MrCharl001">
+          <div class="staff-info">
+            <h3>MrCharl001</h3>
+            <p>Role: Owner</p>
+            <p>N/A</p>
+          </div>
+        </div>
+        <div class="staff-member">
+          <img src="assets/jimmy.png" alt="jimny">
+          <div class="staff-info">
+            <h3>JimmyyFloss</h3>
+            <p>Role: Ownership</p>
+            <p>N/A</p>
+          </div>
+        </div>
+        <div class="staff-member">
+          <img src="assets/2kbelkoz.gif" alt="2kbelkoz">
+          <div class="staff-info">
+            <h3>2kbelkoz</h3>
+            <p>Role: Senior Executive</p>
+            <p>N/A</p>
+          </div>
+        </div>
+        <div class="staff-member">
+          <img src="assets/smiet.png" alt="MatesiakoOfficial">
+          <div class="staff-info">
+            <h3>MatesiakoOfficial</h3>
+            <p>Role: Junior Executive</p>
+            <p>N/A</p>
+          </div>
         </div>
       </div>
 
-      <!-- Staff Member 2 -->
-      <div class="staff-member">
-        <img src="assets/rice.gif" alt="Staff Member 2">
-        <div class="staff-info">
-          <h3>rice</h3>
-          <p>Role: Co-Owner</p>
-          <p>"Howdy I'm xxsolohitmanx, one of the servers main pillars. I've worked with Highrock for over a year now and I've been a member of the ownership for about 6 months now, and I'm constantly known as the "Scary IA person" or the "Man Who Means Business"
-
-            I enjoy things like sports (hence the profile) since I do play baseball & football, I also enjoy cooking, the outdoors and things in regard to technology and music, like lots of music.
-            
-            You'll normally see me doing lots of the public announcements, as I handle most of the server relations. And I focus mainly on staff management and community relations. I'm also the founder of the server's YouTube channel!
-            
-            Just don't frustrate me and we will be on good terms, hopefully you now know a bit more about me."</p>
+      <!-- Column 2 -->
+      <div class="staff-column">
+        <div class="staff-member">
+          <img src="assets/rice.gif" alt="Staff5">
+          <div class="staff-info">
+            <h3>xxsolohitmanx</h3>
+            <p>Role: Co-Owner</p>
+            <p>Highrock's Enemy</p>
+          </div>
+        </div>
+        <div class="staff-member">
+          <img src="assets/atix.png" alt="atix">
+          <div class="staff-info">
+            <h3>AtixCouz</h3>
+            <p>Role: Ownership</p>
+            <p>N/A</p>
+          </div>
+        </div>
+        <div class="staff-member">
+          <img src="assets/arfon.png" alt="arfonella">
+          <div class="staff-info">
+            <h3>us14arfon</h3>
+            <p>Role: Senior Executive</p>
+            <p>N/A</p>
+          </div>
+        </div>
+        <div class="staff-member">
+          <img src="assets/maho.jpg" alt="maho">
+          <div class="staff-info">
+            <h3>maho2010</h3>
+            <p>Role: Junior Executive</p>
+            <p>N/A</p>
+          </div>
         </div>
       </div>
 
-      <!-- Staff Member 3 -->
-      <div class="staff-member">
-        <img src="assets/jimmy.png" alt="Staff Member 3">
-        <div class="staff-info">
-          <h3>jimmy</h3>
-          <p>Role: Ownership</p>
-          <p>yeah he does something ig</p>
+      <!-- Column 3 -->
+      <div class="staff-column">
+        <div class="staff-member">
+          <img src="assets/sip.jpg" alt="sip">
+          <div class="staff-info">
+            <h3>richoffpint</h3>
+            <p>Role: Co-Owner</p>
+            <p>Sip is rich</p>
+          </div>
+        </div>
+        <div class="staff-member">
+          <img src="assets/fluxxrr.gif" alt="fluxxrr">
+          <div class="staff-info">
+            <h3>fluxxrr</h3>
+            <p>Role: Ownership</p>
+            <p>N/A</p>
+          </div>
+        </div>
+        <div class="staff-member">
+          <img src="assets/undog.png" alt="Undogable">
+          <div class="staff-info">
+            <h3>Undogable</h3>
+            <p>Role: Junior Executive</p>
+            <p>N/A</p>
+          </div>
+        </div>
+        <div class="staff-member">
+          <img src="assets/onlyagame12345.jpg" alt="Onlyagame12345">
+          <div class="staff-info">
+            <h3>Onlyagame12345</h3>
+            <p>Role: Junior Executive</p>
+            <p>N/A</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="staff-row">
-      
-      <!-- Staff Member 4 -->
-      <div class="staff-member">
-        <img src="assets/atix.png" alt="Staff Member 3">
-        <div class="staff-info">
-          <h3>AtixCouz</h3>
-          <p>Role: Ownership</p>
-          <p>yeah he does something ig</p>
-        </div>
-      </div>
-    </div>
-      
-
-    
-    <!-- More .staff-row containers can be added here for more rows of 3 -->
-
   </div>
 </body>
 </html>
