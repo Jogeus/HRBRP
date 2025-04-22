@@ -150,3 +150,87 @@ body, html {
     transform: rotate(720deg); /* Spin again to 720 degrees */
   }
 }
+
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  color: white; /* Fixes the purple color (default link color) */
+  font-size: 2.5rem; /* Increases icon size */
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: #ff5733; /* Hover color, you can change this */
+}
+
+
+
+.featured-on {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.featured-on h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.featured-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.featured-logos a {
+  display: inline-block;
+  border-radius: 50%;  /* Make the images round */
+  overflow: hidden;    /* Hide overflow (just in case) */
+}
+
+.featured-logos img {
+  width: 100px;  /* Control size */
+  height: 100px;
+  object-fit: cover; /* Ensures the image covers the circle properly */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-logos img:hover {
+  transform: scale(1.2); /* Slight zoom-in effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Make sure navbar stands out */
+  color: white;
+  padding: 10px 20px;
+  z-index: 10; /* Keeps it on top */
+}
+
+/* Content Below Navbar */
+main {
+  padding-top: 60px; /* Add padding to avoid content being hidden behind the navbar */
+}

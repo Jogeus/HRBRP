@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About HRBRP</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | HRBRP</title>
+    <link rel="icon" href="assets/HRBRPLogo.gif" type="image/gif">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <head>
+    <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
@@ -17,12 +19,15 @@
     }
 
     nav {
-      background: rgba(0, 0, 0, 0.5); /* Translucent black background */
-      display: flex;
-      justify-content: center; /* Center the contents horizontally */
-      align-items: center; /* Vertically center the contents */
-      padding: 1rem;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  z-index: 10; /* Keeps it on top */
+}
 
     nav .logo-and-links {
       display: flex;
@@ -77,8 +82,54 @@
       margin-top: 1.5rem;
       border-radius: 0.5rem;
     }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      color: white !important;
+      font-size: 2.5rem !important;
+      text-decoration: none !important;
+      transition: color 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #ff5733 !important;
+    }
+
+    .socials i {
+      color: white !important;
+      font-size: 2.5rem !important;
+    }
   </style>
 </head>
+
+<body>
+  <div class="socials">
+    <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://roblox.com" target="_blank"><i class="fab fa-roblox"></i></a>
+  </div>
+</body>
+
+  </style>
+</head>
+<script>
+  const testimonials = document.querySelectorAll('.testimonial');
+  let index = 0;
+
+  setInterval(() => {
+    testimonials[index].classList.remove('active');
+    index = (index + 1) % testimonials.length;
+    testimonials[index].classList.add('active');
+  }, 4000);
+</script>
 <body>
   <nav>
     <div class="logo-and-links">
@@ -102,16 +153,22 @@
 
       At the core of HRBRP is the focus on intense high-pressure, role-play-intensive activity on the management and control of an artificial border, an aspect that appeals to those who enjoy the challenge and sophistication of police and security work. Individuals play roles of border officers, police officers, and civilians as they patrol the border and perform sophisticated customs and immigration screening, thereby creating an intense range of experience that can switch from heart-pounding to nail-biting within an instant.</p>
 
-    <h2>What our members say</h2>
-    <div class="testimonial">"BIG W 8K SERVER" - samcio10000</div>
-    <div class="testimonial">"High rock border role play is amazing." - novabat</div>
-    <div class="testimonial">"I think it's great" - Tree_bling</div>
-    <div class="testimonial">"Great, nice and chill staff" - grzecho2222</div>
-    <div class="testimonial">"Well it is an great community, but I would like that there can be more staff in-game." - ImMot_PandaGames</div>
-    <div class="testimonial">"Everything's pretty good. I can't really complain." - Onlyagame12345</div>
-    <div class="testimonial">"It's an honour to serve and protect." - Arrcqne</div>
-    <div class="testimonial">"HRBRP is really fun and I enjoy playing in it as it cures my boredom and gives me a great time" - editloom7_07427</div>
-    <div class="testimonial">"Yes, good server" - TheComrade_Merchant</div>
-  </div>
-</body>
-</html>
+      <h2>What our members say</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial active">"BIG W 8K SERVER" - samcio10000</div>
+        <div class="testimonial">"High rock border role play is amazing." - novabat</div>
+        <div class="testimonial">"I think it's great" - Tree_bling</div>
+        <div class="testimonial">"Great, nice and chill staff" - grzecho2222</div>
+        <div class="testimonial">"Well it is a great community, but I would like that there can be more staff in-game." - ImMot_PandaGames</div>
+        <div class="testimonial">"Everything's pretty good. I can't really complain." - Onlyagame12345</div>
+        <div class="testimonial">"It's an honour to serve and protect." - Arrcqne</div>
+        <div class="testimonial">"HRBRP is really fun and I enjoy playing in it as it cures my boredom and gives me a great time" - editloom7_07427</div>
+        <div class="testimonial">"Yes, good server" - TheComrade_Merchant</div>
+      </div>
+      
+
+    
+      
+        <script src="script.js"></script>
+      </body>
+      </html>
