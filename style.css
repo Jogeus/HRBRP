@@ -298,6 +298,17 @@ main {
     white-space: nowrap; /* Prevents buttons from wrapping text */
   }
 }
+/* Prevent horizontal overflow */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure buttons container fits within screen */
+.buttons-container {
+  max-width: 100%;
+  padding: 0 10px; /* Adds a little breathing room */
+  box-sizing: border-box;
+}
 
   .socials {
     width: 100%;
