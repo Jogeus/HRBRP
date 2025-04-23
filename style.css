@@ -271,34 +271,31 @@ main {
 
 /* Base styles here (already exist) */
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    padding: 1rem;
-  }
-
   .overlay h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Smaller main heading */
   }
 
   .overlay p {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller subheading */
   }
 
   .buttons-container {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
   }
 
   .learn-more-btn,
   .join-us-btn,
   .play-now-btn {
-    width: 100%;
-    justify-content: center;
-    padding: 12px;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    flex: 1 1 auto;
+    white-space: nowrap;
   }
+}
 
   .socials {
     width: 100%;
@@ -322,4 +319,4 @@ main {
   nav img {
     width: 70px;
   }
-}
+
