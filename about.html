@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | HRBRP</title>
-    <link rel="icon" href="assets/HRBRPLogo.gif" type="image/gif">
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <head>
-    <style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | HRBRP</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-image: url('assets/backgroundOfAssetHTML.png');
+      background-image: url('assets/backgroundOfAssetHTML.png'); /* Your background image */
       background-size: cover;
       background-position: center;
       color: white;
     }
-
+  
     nav {
   position: fixed;
   top: 0;
@@ -29,146 +27,184 @@
   z-index: 10; /* Keeps it on top */
 }
 
+  
     nav .logo-and-links {
       display: flex;
-      justify-content: center; /* Center both the logo and links */
+      justify-content: center;
       align-items: center;
     }
-
-    nav img {
-      height: 40px; /* Adjust the size of the logo */
+  
+    nav img.logo {
+      height: 40px;
       width: auto;
-      margin-right: 1rem; /* Space between the logo and the links */
+      margin-right: 1rem;
     }
-
+  
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 1rem;
       font-weight: bold;
     }
-
+  
     nav a:hover {
       text-decoration: underline;
     }
-
-    .about-container {
-      max-width: 1000px;
-      margin: 4rem auto;
-      padding: 2rem;
+  
+    .about-wrapper {
       background: rgba(0, 0, 0, 0.7);
+      margin: 0 auto;
+      margin-top: 10rem; /* space below navbar */
+      max-width: 1000px;
+      padding: 2rem;
       border-radius: 1rem;
-      text-align: center; /* Center the content inside the container */
     }
-
-    .about-container h1 {
-      font-size: 2.5rem;
-    }
-
+  
+  
     .about-container p {
-      font-size: 1.1rem;
       line-height: 1.6;
+      text-align: center;
     }
 
-    .about-container h2 {
+    .carousel-container {
+      text-align: center;
       margin-top: 2rem;
-      font-size: 2rem; /* Adjust font size for the subtitle */
+    }
+
+    .testimonial-carousel {
+      max-width: 600px;
+      margin: 2rem auto;
+      position: relative;
+      overflow: hidden;
     }
 
     .testimonial {
-      background: rgba(255, 255, 255, 0.1);
-      border-left: 5px solid limegreen;
-      padding: 1rem;
-      margin-top: 1.5rem;
-      border-radius: 0.5rem;
+      display: none;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .testimonial.active {
+      display: block;
     }
 
     .socials {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .socials img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s ease;
+    }
+
+    .socials img:hover {
+      transform: scale(1.1);
+    }
+
+    .appears-on {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
       margin-top: 2rem;
       flex-wrap: wrap;
     }
 
-    .socials a {
-      color: white !important;
-      font-size: 2.5rem !important;
-      text-decoration: none !important;
-      transition: color 0.3s ease;
+    .creator {
+      text-align: center;
     }
 
-    .socials a:hover {
-      color: #ff5733 !important;
+    .creator img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
     }
 
-    .socials i {
-      color: white !important;
-      font-size: 2.5rem !important;
+    .creator p {
+      margin: 0;
     }
   </style>
 </head>
-
-<body>
-  <div class="socials">
-    <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
-    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://roblox.com" target="_blank"><i class="fab fa-roblox"></i></a>
-  </div>
-</body>
-
-  </style>
-</head>
-<script>
-  const testimonials = document.querySelectorAll('.testimonial');
-  let index = 0;
-
-  setInterval(() => {
-    testimonials[index].classList.remove('active');
-    index = (index + 1) % testimonials.length;
-    testimonials[index].classList.add('active');
-  }, 4000);
-</script>
 <body>
   <nav>
     <div class="logo-and-links">
-      <!-- Logo -->
-      <img src="assets/HRBRPLogo.gif" alt="HRBRP Logo" class="logo">
-      
-      <!-- Navigation Links -->
+      <img src="assets/HRBRPLogo.gif" alt="HRBRP Logo" class="logo" />
       <div>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="staff.html">Meet Our Staff</a>
-       
-        
       </div>
     </div>
   </nav>
-  
-  <div class="about-container">
-    <h1>About High Rock Border Roleplay</h1>
-    <p>High Rock Border Roleplay (HRBRP) is one of the largest interactive roleplay communities for the highly popular Roblox game Emergency Response: Liberty County (ER:LC). Its highly realistic simulation of police and border security scenarios has made HRBRP one of the largest and most active border roleplay servers for the ER:LC community, boasting an incredible Discord membership of over 8,500 members.
 
-      At the core of HRBRP is the focus on intense high-pressure, role-play-intensive activity on the management and control of an artificial border, an aspect that appeals to those who enjoy the challenge and sophistication of police and security work. Individuals play roles of border officers, police officers, and civilians as they patrol the border and perform sophisticated customs and immigration screening, thereby creating an intense range of experience that can switch from heart-pounding to nail-biting within an instant.</p>
+  <div class="about-wrapper">
+    <div class="about-container">
+      <h1>About High Rock Border Roleplay</h1>
+      <p>High Rock Border Roleplay (HRBRP) is one of the largest interactive roleplay communities for the highly popular Roblox game Emergency Response: Liberty County (ER:LC). Its highly realistic simulation of police and border security scenarios has made HRBRP one of the largest and most active border roleplay servers for the ER:LC community, boasting an incredible Discord membership of over 8,500 members.</p>
 
-      <h2>What our members say</h2>
-      <div class="testimonial-carousel">
-        <div class="testimonial active">"BIG W 8K SERVER" - samcio10000</div>
-        <div class="testimonial">"High rock border role play is amazing." - novabat</div>
-        <div class="testimonial">"I think it's great" - Tree_bling</div>
-        <div class="testimonial">"Great, nice and chill staff" - grzecho2222</div>
-        <div class="testimonial">"Well it is a great community, but I would like that there can be more staff in-game." - ImMot_PandaGames</div>
-        <div class="testimonial">"Everything's pretty good. I can't really complain." - Onlyagame12345</div>
-        <div class="testimonial">"It's an honour to serve and protect." - Arrcqne</div>
-        <div class="testimonial">"HRBRP is really fun and I enjoy playing in it as it cures my boredom and gives me a great time" - editloom7_07427</div>
-        <div class="testimonial">"Yes, good server" - TheComrade_Merchant</div>
+      <p>At the core of HRBRP is the focus on intense high-pressure, role-play-intensive activity on the management and control of an artificial border, an aspect that appeals to those who enjoy the challenge and sophistication of police and security work. Individuals play roles of border officers, police officers, and civilians as they patrol the border and perform sophisticated customs and immigration screening, thereby creating an intense range of experience that can switch from heart-pounding to nail-biting within an instant.</p>
+
+      <h2 style="text-align: center;">What our members say</h2>
+      <div class="carousel-container">
+        <div class="testimonial-carousel">
+          <div class="testimonial active">"BIG W 8K SERVER" - samcio10000</div>
+          <div class="testimonial">"High rock border role play is amazing." - novabat</div>
+          <div class="testimonial">"I think it's great" - Tree_bling</div>
+          <div class="testimonial">"Great, nice and chill staff" - grzecho2222</div>
+          <div class="testimonial">"Well it is a great community, but I would like that there can be more staff in-game." - ImMot_PandaGames</div>
+          <div class="testimonial">"Everything's pretty good. I can't really complain." - Onlyagame12345</div>
+          <div class="testimonial">"It's an honour to serve and protect." - Arrcqne</div>
+          <div class="testimonial">"HRBRP is really fun and I enjoy playing in it as it cures my boredom and gives me a great time" - editloom7_07427</div>
+          <div class="testimonial">"Yes, good server" - TheComrade_Merchant</div>
+        </div>
       </div>
-      
 
-    
-      
-        <script src="script.js"></script>
-      </body>
-      </html>
+      <h2 style="text-align: center;">Our Socials</h2>
+      <div class="socials">
+        <a href="https://discord.gg/highrock" target="_blank"><img src="assets/discord.png" alt="Discord" /></a>
+        <a href="https://youtube.com/@HRBRP" target="_blank"><img src="assets/youtube.png" alt="YouTube" /></a>
+        <a href="https://x.com/HighRock_ERLC" target="_blank"><img src="assets/twitter.svg" alt="X" /></a>
+        <a href="https://www.roblox.com/communities/35046813/High-Rock-Border-Roleplay-Community#!/about" target="_blank"><img src="assets/roblox.png" alt="Roblox" /></a>
+      </div>
+
+      <h2 style="text-align: center;">Appears On</h2>
+      <div class="appears-on">
+        <div class="creator">
+          <a href="https://www.youtube.com/watch?v=WNctcyzOnm8" target="_blank">
+            <img src="assets/OfficerJohn43.jpg" alt="OfficerJohn43">
+          </a>
+          <p>OfficerJohn43</p>
+        </div>
+        <div class="creator">
+          <a href="https://youtu.be/8C1zD2Z0m1U?si=LTUX59FsMEZEjJnY" target="_blank">
+            <img src="assets/AmazePlays.jpg" alt="AmazePlays">
+          </a>
+          <p>AmazePlays</p>
+        </div>
+        <div class="creator">
+          <a href="https://www.youtube.com/watch?v=uR1G_F2bFiA" target="_blank">
+            <img src="assets/RPMaster.jpg" alt="RPMaster">
+          </a>
+          <p>RP Master</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+
+    setInterval(() => {
+      testimonials[index].classList.remove('active');
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }, 3500);
+  </script>
+</body>
+</html>
