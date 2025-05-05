@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script defer src="https://vercel.live/_analytics/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Departments | HRBRP</title>
+  <link rel="icon" href="assets/HRBRPLogo.gif" type="image/gif">
+
+   <!-- Your content here -->
+   <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Vercel Speed Insights Script -->
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  z-index: 10; /* Keeps it on top */
+}
+
+  
+    nav .logo-and-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    nav img.logo {
+      height: 40px;
+      width: auto;
+      margin-right: 1rem;
+    }
+  
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+  
+    nav a:hover {
+      text-decoration: underline;
+    }
+    
+
+    .departments-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 50vh 50vh;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .department {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .department img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .department:hover img {
+      transform: scale(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (max-width: 768px) {
+      .departments-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 50vh);
+      }
+    }
+  </style>
+</head>
+<body>
+
+</head>
+<body>
+  <nav>
+    <div class="logo-and-links">
+      <img src="assets/HRBRPLogo.gif" alt="HRBRP Logo" class="logo" />
+      <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="staff.html">Meet Our Staff</a>
+        <a href="departments.html">Departments</a>
+      </div>
+    </div>
+  </nav>
+  <div class="departments-container">
+    <a href="hrpd.html" class="department">
+      <img src="assets/police.png" alt="High Rock Police">
+      <div class="overlay">High Rock Police</div>
+    </a>
+    <a href="dot.html" class="department">
+      <img src="assets/dot.png" alt="High Rock DOT">
+      <div class="overlay">High Rock DOT</div>
+    </a>
+    <a href="fire.html" class="department">
+      <img src="assets/fire-dept.png" alt="High Rock Fire Department">
+      <div class="overlay">High Rock Fire Department</div>
+    </a>
+    <a href="highrock-military.html" class="department">
+      <img src="assets/military.png" alt="High Rock Military">
+      <div class="overlay">High Rock Military</div>
+    </a>
+  </div>
+
+</body>
+</html>
