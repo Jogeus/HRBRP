@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script defer src="https://vercel.live/_analytics/script.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meet Our Staff | HRBRP</title>
-    <link rel="icon" href="assets/HRBRPLogo.gif" type="image/gif">
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <style>
-
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet Our Staff - HRBRP</title>
+  <link rel="icon" href="assets/HRBRPLogo.gif" type="image/gif">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
     body {
-      margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-image: url('assets/staff.png');
+      margin: 0;
+      background: url('assets/staff.png') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
       color: white;
     }
 
@@ -31,228 +26,198 @@
   z-index: 10; 
 }
 
-
+  
     nav .logo-and-links {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
-    nav img {
+  
+    nav img.logo {
       height: 40px;
       width: auto;
       margin-right: 1rem;
     }
-
+  
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 1rem;
       font-weight: bold;
     }
-
+  
     nav a:hover {
       text-decoration: underline;
     }
 
-    .staff-container {
-      max-width: 1400px;
-      margin: 4rem auto;
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.7);
-      border-radius: 1rem;
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 16px;
+    }
+
+    h1 {
       text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
     }
 
-    .staff-container h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+    h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid white;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
     }
 
-    .staff-container p {
-      font-size: 1.1rem;
-      margin-bottom: 3rem;
+    .staff-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      text-align: center;
+      border-radius: 16px;
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s ease;
     }
 
-    .staff-columns {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
+    .staff-card:hover {
+      transform: translateY(-5px);
     }
 
-    .staff-column {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 1rem;
-      padding: 1rem;
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .staff-member {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 0.5rem;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .staff-member img {
-      border-radius: 50%;
+    .staff-card img {
       width: 100px;
       height: 100px;
       object-fit: cover;
-      margin-bottom: 0.75rem;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 2px solid white;
     }
 
-    .staff-info {
+    .staff-card h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+    }
+
+    .staff-card p {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    .rice-button {
+      display: block;
+      margin: 60px auto 0;
+      padding: 15px 30px;
+      background-color: white;
+      border: none;
+      border-radius: 8px;
       text-align: center;
+      font-size: 1.1rem;
+      font-family: 'Roboto', sans-serif;
+      text-decoration: none;
+      color: black;
+      transition: 0.3s ease;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     }
 
-    .staff-info h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.3rem;
-    }
-
-    .staff-info p {
-      font-size: 1rem;
-      margin: 0.25rem 0;
+    .rice-button:hover {
+      background-color: #ddd;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="logo-and-links">
-      <img src="assets/HRBRPLogo.gif" alt="HRBRP Logo" class="logo">
-      <div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="staff.html">Meet Our Staff</a>
-        <a href="departments.html">Departments</a>
-      </div>
-    </div>
-  </nav>
-
-  <div class="staff-container">
+  <div class="container">
     <h1>Meet Our Staff</h1>
-    <p>Our staff members are the backbone of High Rock Border Roleplay, ensuring a smooth and enjoyable experience for all players. Get to know the people who keep everything running smoothly.</p>
 
-    <div style="text-align: center; margin-top: 50px;">
-      <a href="rice.html" class="memorial-btn">Rice</a>
-    </div>
-    
-    <div class="staff-columns">
-     
-      <div class="staff-column">
-        <div class="staff-member">
-          <img src="assets/charl.png" alt="MrCharl001">
-          <div class="staff-info">
-            <h3>MrCharl001</h3>
-            <p>Role: Owner</p>
-            <p>"Staccato, forte ma leggiero tempo giusto"</p>
-          </div>
-        </div>
-        <div class="staff-member">
-          <img src="assets/jimmy.gif" alt="jimny">
-          <div class="staff-info">
-            <h3>JimmyyFloss</h3>
-            <p>Role: Ownership</p>
-            <p>"Hello! I'm Jimmy I've been on the team since 3/22/24, I love being here, everyone has been so helpful around me."</p>
-          </div>
-        </div>
-        <div class="staff-member">
-          <img src="assets/fluxxrr.gif" alt="fluxxrr">
-          <div class="staff-info">
-            <h3>fluxxrr</h3>
-            <p>Role: Senior Executive</p>
-            <p>N/A</p>
-          </div>
-        </div>
-        <div class="staff-member">
-          <img src="assets/smiet.png" alt="MatesiakoOfficial">
-          <div class="staff-info">
-            <h3>MatesiakoOfficial</h3>
-            <p>Role: Junior Executive</p>
-            <p>"Niech żyje Polska"</p>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="staff-column">
-        <div class="staff-member">
-          <img src="assets/2kbelkoz.gif" alt="Staff5">
-          <div class="staff-info">
-            <h3>2kbelkoz</h3>
-            <p>Role: Co-Owner</p>
-            <p>"The Strict Community Influencer" </p>
-          </div>
-        </div>
-        <div class="staff-member">
-          <img src="assets/atix.png" alt="atix">
-          <div class="staff-info">
-            <h3>AtixCouz</h3>
-            <p>Role: Ownership</p>
-            <p>"Absolute Cinema"</p>
-          </div>
-        </div>
-        <div class="staff-member">
-          <img src="assets/unknown.png" alt="S.B">
-          <div class="staff-info">
-            <h3>This one is still doing the application..</h3>
-            <p>Role: Senior Executive</p>
-            <p>This guy ain't on the team yet, or are they?</p>
-          </div>
-        </div>
-        <div class="staff-member">
-          <img src="assets/unknown.png" alt="S.B">
-          <div class="staff-info">
-            <h3>This one is still doing the application..</h3>
-            <p>Role: Junior Executive</p>
-            <p>This guy ain't on the team yet, or are they?</p>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="staff-column">
-        <div class="staff-member">
-          <img src="assets/sip.jpg" alt="sip">
-          <div class="staff-info">
-            <h3>richoffpint</h3>
-            <p>Role: Co-Owner</p>
-            <p>"帝國榮耀"</p>
-          </div>
-        </div>
-        <div class="staff-member">
-          <img src="assets/arfon.png" alt="arfonello">
-          <div class="staff-info">
-            <h3>us14arfon</h3>
-            <p>Role: Ownership</p>
-            <p>"The Reason for Extra Coffee"</p>
-          </div>
-        </div>
-        <div class="staff-member">
-          <img src="assets/undog.png" alt="Undogable">
-          <div class="staff-info">
-            <h3>Undogable</h3>
-            <p>Role: Junior Executive</p>
-            <p>"Goober"</p>
-          </div>
-        </div>
-        <div class="staff-member">
-          <img src="assets/onlyagame12345.jpg" alt="Onlyagame12345">
-          <div class="staff-info">
-            <h3>Onlyagame12345</h3>
-            <p>Role: Junior Executive</p>
-            <p>"I like hockey, especially the Toronto Maple Leafs."</p>
-          </div>
-        </div>
+    <h2>Owner</h2>
+    <div class="staff-grid">
+      <div class="staff-card">
+        <img src="assets/intenzity.png" alt="Intenz1ty">
+        <h3>Intenz1ty</h3>
+        <p>Owner</p>
       </div>
     </div>
-  </div>
+
+    <h2>Co Owners</h2>
+    <div class="staff-grid">
+      <div class="staff-card">
+        <img src="assets/rice.gif" alt="xxsolohitmanx">
+        <h3>xxsolohitmanx</h3>
+        <p>Co Owner</p>
+      </div>
+      <div class="staff-card">
+        <img src="assets/sip.jpeg" alt="richoffpint">
+        <h3>richoffpint</h3>
+        <p>Co Owner</p>
+      </div>
+    </div>
+
+    <h2>Ownership</h2>
+    <div class="staff-grid">
+      <div class="staff-card">
+        <img src="assets/atix.png" alt="AtixCouz">
+        <h3>AtixCouz</h3>
+        <p>Ownership</p>
+      </div>
+      <div class="staff-card">
+        <img src="assets/2kbelkoz.gif" alt="2kbelkoz">
+        <h3>2kbelkoz</h3>
+        <p>Ownership</p>
+      </div>
+      <div class="staff-card">
+        <img src="assets/arfon.png" alt="us14arfon">
+        <h3>us14arfon</h3>
+        <p>Ownership</p>
+      </div>
+    </div>
+
+    <h2>Senior Executive</h2>
+    <div class="staff-grid">
+      <div class="staff-card">
+        <h3>None</h3>
+        <p>—</p>
+      </div>
+    </div>
+
+    <h2>Junior Executives</h2>
+    <div class="staff-grid">
+      <div class="staff-card">
+        <img src="assets/undog.png" alt="Undogable1256">
+        <h3>Undogable1256</h3>
+        <p>Junior Executive</p>
+      </div>
+      <div class="staff-card">
+        <img src="assets/onlyagame12345.jpg" alt="Onlyagame12345">
+        <h3>Onlyagame12345</h3>
+        <p>Junior Executive</p>
+      </div>
+      <div class="staff-card">
+        <img src="assets/smiet.png" alt="MatesiakoOfficial">
+        <h3>MatesiakoOfficial</h3>
+        <p>Junior Executive</p>
+      </div>
+    </div>
+
+
+    <nav>
+      <div class="logo-and-links">
+        <img src="assets/HRBRPLogo.gif" alt="HRBRP Logo" class="logo" />
+        <div>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="staff.html">Meet Our Staff</a>
+          <a href="departments.html">Departments</a>
+        </div>
+      </div>
+    </nav>
+  
+   
 </body>
 </html>
