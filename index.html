@@ -26,21 +26,16 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Roboto', sans-serif;
+    html, body {
+      height: 500px; /* fixed height matching image */
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      background: black;
     }
-
-    .video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
-      object-fit: cover;
+    body {
+      background: url('assets/intez.jpg') no-repeat center center;
+      background-size: contain; /* Option 1 */
+      background-color: black;
     }
 
     .overlay {
@@ -142,7 +137,7 @@
 </head>
 <body>
   <video autoplay muted loop class="video-background">
-    <source src="assets/hrbrptrailer.mp4" type="video/mp4" />
+    <source src="hrbrptrailer.mp4" type="video/mp4" />
     Your browser does not support HTML5 video.
   </video>
 
