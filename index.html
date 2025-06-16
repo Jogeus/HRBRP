@@ -26,16 +26,21 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
   <style>
-    html, body {
-      height: 500px; /* fixed height matching image */
-      overflow-x: hidden;
-      font-family: Arial, sans-serif;
-      background: black;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
     }
-    body {
-      background: url('assets/intez.jpg') no-repeat center center;
-      background-size: contain; /* Option 1 */
-      background-color: black;
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
     }
 
     .overlay {
@@ -137,19 +142,27 @@
 </head>
 <body>
   <video autoplay muted loop class="video-background">
-    <source src="hrbrptrailer.mp4" type="video/mp4" />
+    <source src="assets/hrbrptrailer.mp4" type="video/mp4" />
     Your browser does not support HTML5 video.
   </video>
 
   <div class="overlay">
-    <h1>Thank You For Playing At High Rock Border Roleplay</h1>
-    <p>August 2023 - June 2025</p>
-  
-    I, Jogesus, the developer of this website, thank you all for taking your time to read this. I hope i see you all in the future. 
+    <h1>High Rock Border Roleplay</h1>
+    <p>Elite Roleplays ┃ Active And Highly Trained Staff ┃ Immersive Realism</p>
     
-    Goodbye.
     
- 
+    <div class="buttons-container">
+      
+      <a href="https://www.roblox.com/games/start?launchData=%7B%5C%22psCode%5C%22%3A%5C%22HRock%5C%22%7D&placeId=2534724415" class="play-now-btn">
+        Play Now
+      </a>
+
+     
+      <a href="about.html" class="learn-more-btn">Learn More</a>
+
+   
+      <a href="https://discord.gg/highrock" target="_blank" class="join-us-btn">
+        <i class="fab fa-discord"></i> Join Us
       </a>
     </div>
   </div>
